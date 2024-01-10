@@ -20,4 +20,6 @@ headers = {"Connection": 'keep-alive',
            }
 
 response = requests.post(url=url, headers=headers)
+os.environ["result"] = response.text 
+
 print(response.text)
