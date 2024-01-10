@@ -32,3 +32,7 @@ jobs:
         python daily_sign.py
       env:
         JD_COOKIE: ${{ secrets.JD_COOKIE }}
+    - name: Print text from python file
+      run: |
+        echo "The text is: $result"
+
