@@ -30,9 +30,7 @@ jobs:
     - name: Run weather Report
       run: |
         python daily_sign.py
+        Write-Output "::set-output name=summary::$result" 
       env:
         JD_COOKIE: ${{ secrets.JD_COOKIE }}
-    - name: Print text from python file
-      run: |
-        echo "The text is: $result"
 
