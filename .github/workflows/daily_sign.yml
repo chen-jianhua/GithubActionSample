@@ -30,7 +30,7 @@ jobs:
     - name: Run weather Report
       run: |
         python daily_sign.py
-        echo "::set-output name=summary::$result" 
+        echo "### Hello world! :rocket:" >> $GITHUB_STEP_SUMMARY 
       env:
         JD_COOKIE: ${{ secrets.JD_COOKIE }}
 
